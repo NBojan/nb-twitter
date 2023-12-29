@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'NB - Twitter',
     description: 'NB Twitter clone. Project made for learning and self-development.',
-    url: 'https://nb-instagram.vercel.app/',
+    url: 'https://nb-twitter.vercel.app/',
     siteName: 'NB - Twitter',
     images: [
       {
