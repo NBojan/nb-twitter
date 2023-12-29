@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: 'NB - Twitter',
     images: [
       {
-        url: 'https://firebasestorage.googleapis.com/v0/b/insta-clone-cb289.appspot.com/o/appImages%2Fthumb.png?alt=media&token=7e9e5088-a05d-44f7-b623-33588845e38c',
+        url: 'https://firebasestorage.googleapis.com/v0/b/twitter-clone-bf6ea.appspot.com/o/appImages%2F1.png?alt=media&token=b952531b-93c6-4f39-b02f-32811a68828d',
         width: 1280,
         height: 642,
       },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     description: 'NB Twitter clone. Project made for learning and self-development.',
     images: [
       {
-        url: 'https://firebasestorage.googleapis.com/v0/b/insta-clone-cb289.appspot.com/o/appImages%2Fthumb.png?alt=media&token=7e9e5088-a05d-44f7-b623-33588845e38c',
+        url: 'https://firebasestorage.googleapis.com/v0/b/twitter-clone-bf6ea.appspot.com/o/appImages%2F1.png?alt=media&token=b952531b-93c6-4f39-b02f-32811a68828d',
         width: 1280,
         height: 642,
       },
