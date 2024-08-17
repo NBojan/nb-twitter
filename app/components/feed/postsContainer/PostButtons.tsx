@@ -54,21 +54,21 @@ const PostButtons = ({ post } : { post: postElementPlain }) => {
     return (
         <div className="flex justify-between items-center mt-2">
             <div className="flex items-center space-x-1">
-                <button type="button" className="post-btn" onClick={openModal}><FaRegCommentDots /></button>
+                <button type="button" className="post-btn comment-btn" onClick={openModal}><FaRegCommentDots /></button>
                 {comments.length > 0 && <span className="text-xs theme-gray500-gray400">{comments.length}</span>}
             </div>
             
             <div className="flex items-center space-x-1">
                 {hasLiked ? 
-                    <button type="button" className="post-btn text-red-500 dark:text-red-500 hover:bg-red-200 dark:hover:bg-red-900" onClick={removeLike}><FaHeart /></button> 
+                    <button type="button" className="post-btn text-red-500 dark:text-red-500 hover:bg-red-200 dark:hover:bg-red-900 dislike-btn" onClick={removeLike}><FaHeart /></button> 
                 : 
-                    <button type="button" className="post-btn hover:text-red-500 hover:bg-red-200 dark:hover:bg-red-900" onClick={addLike}><FaRegHeart /></button>
+                    <button type="button" className="post-btn hover:text-red-500 hover:bg-red-200 dark:hover:bg-red-900 like-btn" onClick={addLike}><FaRegHeart /></button>
                 }
                 {likes.length > 0 && <span className={`text-xs ${hasLiked ? 'text-red-500' : 'theme-gray500-gray400'}`}>{likes.length}</span>}
             </div>
 
             <button type="button" className="post-btn"><FaRetweet /></button>
-            {isOwner && <button type="button" className="post-btn" onClick={removePost}><FaRegTrashCan /></button>}
+            {isOwner && <button type="button" className="post-btn delete-btn" onClick={removePost}><FaRegTrashCan /></button>}
             <button type="button" className="post-btn"><FaDeezer /></button>
         </div>
     );

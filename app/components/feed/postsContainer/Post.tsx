@@ -9,7 +9,7 @@ const Post = ({ post } : { post: postElement }) => {
     const postPlainObject = {...post, timestamp};
     
     return (
-        <article className="flex p-3 border-b theme-grayBorder-200-700 space-x-4">
+        <article className="flex p-3 border-b theme-grayBorder-200-700 space-x-4 post">
             <Image src={post.userImg} width={48} height={48} alt="UserImg" className="rounded-full w-[48px] h-[48px]" />
             
             <div className="flex-1">
