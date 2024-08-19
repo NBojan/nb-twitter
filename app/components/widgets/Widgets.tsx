@@ -2,7 +2,7 @@ import { NewsWidget, SearchWidget, FollowsWidget } from "..";
 
 const Widgets = () => {
     return (
-        <section className="hidden lg:block w-[350px] pl-8">
+        <section id="rightSidebar" className="hidden lg:block w-[350px] pl-8">
             <SearchWidget />
             <NewsWidget />
             <FollowsWidget />

@@ -8,7 +8,7 @@ const Links = () => {
     const { user } = useGlobalContext();
 
     return (
-        <div>
+        <div id="leftSidebarLinks">
             {sidebarLinks.map(link => {
                 let path = link.path;
                 if(link.text === "Profile") path = `${link.path}/${user.username}`;

@@ -14,7 +14,7 @@ const UserProfile = () => {
     }
     
     return (
-        <div className="relative">
+        <div className="relative userProfile">
             <div className="flex items-center justify-center rounded-full xl:justify-between xl:p-3 xl:hover:bg-gray-100 transition xl:dark:hover:bg-gray-700 cursor-default" onClick={() => setMenu(!menu)}>
                 <div className="flex space-x-2 rounded-full xl:rounded-none p-1.5 xl:p-0 hover:bg-blue-100 dark:hover:bg-sky-900 xl:hover:bg-transparent dark:xl:hover:bg-transparent transition">
                     <Image src={user.userImg} width={48} height={48} alt="UserImg" className="rounded-full w-[48px] h-[48px]" />
