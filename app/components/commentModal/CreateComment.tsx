@@ -81,6 +81,7 @@ const CreateComment = ({ postId } : { postId: string }) => {
                   placeholder="Your reply..."
                   value={commentText}
                   onChange={e => setCommentText(e.target.value)}
+                  id="comment-textarea"
                 />
 
                 {selectedFile && <SelectedFile file={selectedFile} setSelectedFile={setSelectedFile} />}

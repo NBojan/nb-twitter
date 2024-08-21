@@ -64,7 +64,7 @@ const PostButtons = ({ post } : { post: postElementPlain }) => {
                 : 
                     <button type="button" className="post-btn hover:text-red-500 hover:bg-red-200 dark:hover:bg-red-900 like-btn" onClick={addLike}><FaRegHeart /></button>
                 }
-                {likes.length > 0 && <span className={`text-xs ${hasLiked ? 'text-red-500' : 'theme-gray500-gray400'}`}>{likes.length}</span>}
+                {likes.length > 0 && <span className={`text-xs ${hasLiked ? 'text-red-500' : 'theme-gray500-gray400'} likeNumber`}>{likes.length}</span>}
             </div>
 
             <button type="button" className="post-btn"><FaRetweet /></button>

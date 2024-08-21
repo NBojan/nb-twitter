@@ -14,7 +14,7 @@ const Post = ({ post } : { post: postElement }) => {
             
             <div className="flex-1">
                 <PostHeader firstName={post.firstName} lastName={post.lastName} username={post.username} timestamp={timestamp} />
-                <Link href={`/tweet/${post.id}`}>
+                <Link href={`/tweet/${post.id}`} className="post-postLink">
                     {post.text && <PostText text={post.text} />}
                     {post.postImage && <PostImage postImage={post.postImage} />}
                 </Link>

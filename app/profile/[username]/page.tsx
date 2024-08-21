@@ -4,6 +4,8 @@ import type { Metadata } from 'next'
 import { HeaderBack, User, UserPosts } from "@/app/components";
 import { collection, getDocs, query, where } from "firebase/firestore";
 
+export const revalidate = 1;
+
 export const metadata: Metadata = {
   title: "NB Twitter - Profile"
 }
@@ -37,7 +39,7 @@ const ProfilePage = async ({ params: { username } } : { params: { username:strin
         {exists ? (
           <>
             <User userData={userData} userPosts={userPosts} />
-            <UserPosts userPosts={userPosts} />
+            <UserPosts userEmail={userData.email} userPosts={userPosts} />
           </>
         ) : (
           <div className="p-3 mt-6 flex flex-col items-center space-y-4">

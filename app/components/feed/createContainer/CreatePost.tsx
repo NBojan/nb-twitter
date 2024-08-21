@@ -78,6 +78,7 @@ const CreatePost = ({ inputId, isModal } : { inputId:string, isModal:boolean }) 
                   placeholder="What is happening?!"
                   value={tweetText}
                   onChange={e => setTweetText(e.target.value)}
+                  id="main-textarea"
                 />
 
                 {selectedFile && <SelectedFile file={selectedFile} setSelectedFile={setSelectedFile} />}
