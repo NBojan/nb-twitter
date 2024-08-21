@@ -43,6 +43,7 @@ const CreatePost = ({ inputId, isModal } : { inputId:string, isModal:boolean }) 
                     firstName: user.firstName,
                     lastName: user.lastName,
                     username: user.username,
+                    slug: user.slug,
                     userImg: user.userImg,
                     timestamp: Timestamp.fromDate(new Date()),
                     storageId: imageId,
@@ -57,6 +58,7 @@ const CreatePost = ({ inputId, isModal } : { inputId:string, isModal:boolean }) 
                 firstName: user.firstName,
                 lastName: user.lastName,
                 username: user.username,
+                slug: user.slug,
                 userImg: user.userImg,
                 timestamp: Timestamp.fromDate(new Date())
             })

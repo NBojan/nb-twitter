@@ -9,6 +9,7 @@ export interface postElement {
     timestamp: Timestamp;
     userImg: string;
     username: string;
+    slug: string;
     postImage?: string;
     storageId?: string;
 }
@@ -35,6 +36,7 @@ export interface postElementPlain {
     timestamp: string;
     userImg: string;
     username: string;
+    slug: string;
     postImage?: string;
     storageId?: string;
 }

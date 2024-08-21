@@ -13,7 +13,7 @@ const Post = ({ post } : { post: postElement }) => {
             <Image src={post.userImg} width={48} height={48} alt="UserImg" className="rounded-full w-[48px] h-[48px]" />
             
             <div className="flex-1">
-                <PostHeader firstName={post.firstName} lastName={post.lastName} username={post.username} timestamp={timestamp} />
+                <PostHeader firstName={post.firstName} lastName={post.lastName} username={post.username} slug={post.slug} timestamp={timestamp} />
                 <Link href={`/tweet/${post.id}`} className="post-postLink">
                     {post.text && <PostText text={post.text} />}
                     {post.postImage && <PostImage postImage={post.postImage} />}

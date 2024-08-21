@@ -41,8 +41,8 @@ const PostButtons = ({ post } : { post: postElementPlain }) => {
         await deleteDoc(doc(db, "userPosts", post.id, "likes", user.email));
     }
     const openModal = () => {
-        const { id, firstName, lastName, username, userImg, text, postImage, timestamp } = post;
-        setCommentModal({open: true, postId: id, firstName, lastName, username, userImg, postImage, text, timestamp });
+        const { id, firstName, lastName, username, slug, userImg, text, postImage, timestamp } = post;
+        setCommentModal({open: true, postId: id, firstName, lastName, username, slug, userImg, postImage, text, timestamp });
     }
     const removePost = async () => {
         if(confirm("Remove this tweet?")){

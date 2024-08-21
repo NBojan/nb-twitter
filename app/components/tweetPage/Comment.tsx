@@ -12,7 +12,7 @@ const Comment = ({ comment, postId } : { comment: postElement, postId: string })
             <Image src={comment.userImg} width={48} height={48} alt="UserImg" className="rounded-full w-[48px] h-[48px]" />
             
             <div className="flex-1">
-                <PostHeader firstName={comment.firstName} lastName={comment.lastName} username={comment.username} timestamp={timestamp} />
+                <PostHeader firstName={comment.firstName} lastName={comment.lastName} username={comment.username} slug={comment.slug} timestamp={timestamp} />
                 {comment.text && <PostText text={comment.text} />}
                 {comment.postImage && <PostImage postImage={comment.postImage} />}
                 <CommentButtons comment={postPlainObject} postId={postId} />

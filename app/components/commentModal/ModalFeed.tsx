@@ -13,7 +13,7 @@ const ModalFeed = () => {
                 <Image src={commentModal.userImg} width={48} height={48} alt="UserImg" className="rounded-full w-[48px] h-[48px]" />
 
                 <div className="flex-1">
-                    <PostHeader firstName={commentModal.firstName} lastName={commentModal.lastName} username={commentModal.username} timestamp={commentModal.timestamp} />
+                    <PostHeader firstName={commentModal.firstName} lastName={commentModal.lastName} username={commentModal.username} slug={commentModal.slug} timestamp={commentModal.timestamp} />
                     {commentModal.text && <PostText text={commentModal.text} />}
                     {commentModal.postImage && <PostImage postImage={commentModal.postImage} />}
                 </div>

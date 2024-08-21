@@ -10,9 +10,9 @@ export const metadata: Metadata = {
   title: "NB Twitter - Profile"
 }
 
-const getUser = async (username:string) => {
+const getUser = async (slug:string) => {
     const user = [] as any;
-    const userQuery = query(collection(db, "users"), where("username", "==", username));
+    const userQuery = query(collection(db, "users"), where("slug", "==", slug));
     const userSnaphsot = await getDocs(userQuery);
     userSnaphsot.forEach(userDoc => user.push(userDoc));
     
@@ -21,7 +21,7 @@ const getUser = async (username:string) => {
         const userPosts = [] as any;
         const userPostsQuery = query(collection(db, "userPosts"), where("email", "==", userData.email));
         const userPostsSnapshot = await getDocs(userPostsQuery);
-        userPostsSnapshot.forEach(postDoc => userPosts.push({id: postDoc.id, ...postDoc.data()}));
+        userPostsSnapshot.forEach(postDoc => userPosts.push({ id: postDoc.id }));
 
         return { exists: true, userData, userPosts }
     }
@@ -29,9 +29,8 @@ const getUser = async (username:string) => {
 
 }
 
-const ProfilePage = async ({ params: { username } } : { params: { username:string } }) => {
-    const { exists, userData, userPosts } = await getUser(username);
-
+const ProfilePage = async ({ params: { slug } } : { params: { slug:string } }) => {
+    const { exists, userData, userPosts } = await getUser(slug);
     return (
       <section className="flex-1 border-r theme-grayBorder-200-700 max-w-[660px]">
         <HeaderBack title={exists ? userData.username : "Profile"} />

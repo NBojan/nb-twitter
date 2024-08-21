@@ -1,5 +1,5 @@
-import { postElement, userElement } from "@/app/utils/Elements";
 import Image from "next/image";
+import { postElement, userElement } from "@/app/utils/Elements";
 
 const User = ({ userData, userPosts } : { userData: userElement, userPosts: postElement[] }) => {
     return (

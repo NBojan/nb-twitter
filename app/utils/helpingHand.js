@@ -5,7 +5,7 @@ export const femaleImg = 'https://firebasestorage.googleapis.com/v0/b/twitter-cl
 export const loginUrl = 'https://nb-twitter.vercel.app/api/auth/login';
 export const registerUrl = 'https://nb-twitter.vercel.app/api/auth/register';
 export const tokenLoginUrl = 'https://nb-twitter.vercel.app/api/auth/tokenLogin';
-// export const tokenLoginUrl = 'http://localhost:3000/api/auth/api/auth/tokenLogin';
+// export const tokenLoginUrl = 'http://localhost:3000/api/auth/tokenLogin';
 
 // export const loginUrl = 'http://localhost:3000/api/auth/login';
 

@@ -46,7 +46,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             id: userWithEmail.id,
             firstName: userWithEmailData.firstName, 
             lastName: userWithEmailData.lastName, 
-            username: userWithEmailData.username, 
+            username: userWithEmailData.username,
+            slug: userWithEmailData.slug,
             email: userWithEmailData.email, 
             gender: userWithEmailData.gender,
             userImg: userWithEmailData.userImg

@@ -30,7 +30,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             username: userData.username, 
             email: userData.email, 
             gender: userData.gender,
-            userImg: userData.userImg
+            userImg: userData.userImg,
+            slug: userData.slug
         })
     }
     return res.status(500).json({errMsg: 'Need a get request instead'})

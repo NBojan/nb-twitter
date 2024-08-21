@@ -49,11 +49,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const snapshot = await getDocs(q);
         snapshot.forEach(doc => userWithExistingUsername.push(doc.id));
         if(userWithExistingUsername.length > 0) return res.status(500).json({errMsg: 'Username is already in use'});
+        
+        const slug = username.split(" ").join("-");
 
         const hashedPassword = await bcrypt.hash(password, 10);
 
         await setDoc(doc(db, "users", email), {
-            firstName, lastName, username, email, gender,
+            firstName, lastName, username, email, gender, slug,
             password: hashedPassword,
             userImg: gender === 'male' ? maleImg : femaleImg
         });
