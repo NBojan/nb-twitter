@@ -78,7 +78,7 @@ const LoginForm = () => {
             }
 
             <input type="email" name="email" value={values.email} placeholder="email@address.com" onChange={handleChange} className="form-input w-full" />
-            <input type="password" name="password" value={values.password} placeholder="Password..." onChange={handleChange} minLength={8} className="form-input w-full" />
+            <input type="password" name="password" value={values.password} placeholder="Password..." onChange={handleChange} className="form-input w-full" />
 
             <div className="flex flex-col items-center space-y-4">
                 {error && <p className="text-sm text-center text-red-500">{error}</p>}
