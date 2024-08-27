@@ -7,7 +7,7 @@ const ThemeSwitch = () => {
     const { theme, toggleTheme } = useGlobalContext();
 
     return (
-        <button type="button" className="text-[24px] hover:scale-125 dark:text-twitterTextDarkmode transition" onClick={toggleTheme}>
+        <button id="themeButton" type="button" className="text-[24px] hover:scale-125 dark:text-twitterTextDarkmode transition" onClick={toggleTheme}>
             {theme === "light" ? <CiDark /> : <CiLight />}
         </button>
     );
