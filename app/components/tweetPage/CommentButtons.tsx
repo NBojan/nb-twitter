@@ -43,15 +43,15 @@ const CommentButtons = ({ comment, postId } : { comment: postElementPlain, postI
         <div className="flex justify-between items-center mt-2">
             {hasLiked ? (
                 <div className="flex items-center space-x-1">
-                    <button type="button" className="post-btn text-red-500 dark:text-red-500 hover:bg-red-200 dark:hover:bg-red-900" onClick={removeLike}><FaHeart /></button>
+                    <button type="button" className="post-btn text-red-500 dark:text-red-500 hover:bg-red-200 dark:hover:bg-red-900 dislike-btn" onClick={removeLike}><FaHeart /></button>
                     <span className="text-xs text-red-500">{likes.length}</span>
                 </div>
                 ) : (
-                <button type="button" className="post-btn hover:text-red-500 hover:bg-red-200 dark:hover:bg-red-900" onClick={addLike}><FaRegHeart /></button>
+                <button type="button" className="post-btn hover:text-red-500 hover:bg-red-200 dark:hover:bg-red-900 like-btn" onClick={addLike}><FaRegHeart /></button>
             )}
 
             <button type="button" className="post-btn"><FaRetweet /></button>
-            {isOwner && <button type="button" className="post-btn" onClick={removePost}><FaRegTrashCan /></button>}
+            {isOwner && <button type="button" className="post-btn delete-btn" onClick={removePost}><FaRegTrashCan /></button>}
             <button type="button" className="post-btn"><FaDeezer /></button>
         </div>
     );
